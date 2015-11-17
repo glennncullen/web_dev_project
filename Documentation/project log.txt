@@ -50,10 +50,12 @@ and inserting a new one one the opposite side.
         >Shift columns along
         >Update game stats
         
-    *Take user input and allow change
+    *Take user input and allow change (PHP)
         >Visual themes
             >Game colours
-            >Letter sizes
+            >Font sizes
+            >Change Font
+            >Disability modes
             
     *Enrich visual effects
         >Juicy JQuery
@@ -62,7 +64,15 @@ and inserting a new one one the opposite side.
         
     *Make responsive for mobile use
         >Bootstrap
-    
+
+
+
+***Ongoing Brainstorm***
+
+
+
+
+
 
 
 
@@ -72,6 +82,8 @@ and inserting a new one one the opposite side.
         >Sound file stored in database?
                     or
         >Link to spotify soundcloud playlist?
+                    or
+        >Files stored locally on the server
         
     >Allow users to submit word new word    
         >Must be approved before being added to database
