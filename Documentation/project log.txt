@@ -1,0 +1,145 @@
+----------PROJECT OUTLINE----------
+Deliverables
+    You have to submit one single document (6-8 A4 pages + appendices, such as a manual, etc.) through 
+    Moodle’s Turnitin submission.
+
+The report should include:
+    1. Title page with full student names & SNs
+    2. GitHub repository link & a link to a deployed app
+    3. Project Proposal
+        a. An introduction to the project subject matter
+        b. The goals of the project
+        c. The strategy that will be employed to meet the stated project goals
+        d. The key characteristics of your project in terms of functionality
+        e. A list of the project deliverables that will be submitted on project completion 
+    4. Overview of the technologies used in your app
+    5. Overview of the architecture of your app (including diagrams)
+    6. Manual in the appendices (not the main body of your 6-8 page report)
+    
+The GitHub repository should include:
+    1. All code built from day 0 that is traceable (separate account for each member should be used)
+    2. Code that came from any Internet sources should be referenced in comments (code that wasn’t 
+    referenced properly will not be marked and will be reported for plagiarism)
+    3. All code submitted to GitHub after the deadline will not be marked
+    
+The deployed app repository should:
+    1. Be fully working
+    2. Should be identical to the app last committed to GitHub at the time of the final submission
+
+
+
+The project idea is for a wordsearch that constantly evolves at set intervals 
+by shifting the columns of letters across, removing a column on one side
+and inserting a new one one the opposite side.
+
+    *Database
+        >Dictionary of words stored in an XML file
+        >Track longest word found
+        >Track total count of all words found
+        >Track count for each individual word
+        
+    *RSS Feed
+        >Give global game stats
+            >Longest word found
+            >Total number of words found
+            >Time until next grid update
+            >Total number of players(current and overall)
+        >Social media updates
+            
+    *AJAX to dynamically update app
+        >Shift columns along
+        >Update game stats
+        
+    *Take user input and allow change
+        >Visual themes
+            >Game colours
+            >Letter sizes
+            
+    *Enrich visual effects
+        >Juicy JQuery
+        >Jaysus that's some Javascript
+        >Sexy Stylesheets
+        
+    *Make responsive for mobile use
+        >Bootstrap
+    
+
+
+
+***Possible future ideas***
+
+    >Background music
+        >Sound file stored in database?
+                    or
+        >Link to spotify soundcloud playlist?
+        
+    >Allow users to submit word new word    
+        >Must be approved before being added to database
+
+***********************************
+
+Master To Do List:
+
+>Create GitHub repository
+
+>Look into git pushing from multiple users
+    >Commit with initials for the time being
+
+>Create sample dictionary
+    >Maybe around 100 words for the time being
+
+>Create database
+    >Work out logic
+    >Draft up ER model
+    >Write SQL
+    
+>Create social media pages
+    >Allow us to post news and updates once app is finished
+    
+>Brainstorm basic functionality of game
+    >Determine grid size
+    >Score System?
+
+
+---------------Paul----------------
+
+To do list:
+
+
+
+Progress:
+
+
+
+
+----------------Dan----------------
+
+To do list:
+    >Create Wireframes
+
+
+Progress:
+    >Wireframes
+        -Made a few desktop wireframes for a common resolution
+        -Still need to create mobile wireframes
+
+
+----------------Glenn--------------
+
+To do list:
+
+
+
+Progress:
+
+
+
+
+-----------------------------------
+
+++Completed Tasks++
+
+
+
+
+
