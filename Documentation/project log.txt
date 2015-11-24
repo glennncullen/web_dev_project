@@ -91,13 +91,14 @@ and inserting a new one one the opposite side.
 
 Master To Do List:
 
->Create GitHub repository
+>Create GitHub repository - Done
 
->Look into git pushing from multiple users
-    >Commit with initials for the time being
+>Look into git pushing from multiple users - Done
+    >Commit with initials for the time being - Done
 
 >Create sample dictionary
-    >Maybe around 100 words for the time being
+    >Maybe around 100 w
+    ords for the time being
 
 >Create database
     >Work out logic
@@ -116,7 +117,9 @@ Master To Do List:
 
 To do list:
 
-
+    >Build the front end of the site
+    >Make it responsive - use bootstrap
+    
 
 Progress:
 
@@ -138,7 +141,12 @@ Progress:
 ----------------Glenn--------------
 
 To do list:
+    > XML builder
 
+
+    >Create sample dictionary
+        >Maybe around 100 words for the time being
+    
 
 
 Progress:
