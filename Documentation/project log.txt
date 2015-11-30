@@ -74,7 +74,6 @@ and inserting a new one one the opposite side.
 
 
 
-
 ***Possible future ideas***
 
     >Background music
@@ -86,19 +85,16 @@ and inserting a new one one the opposite side.
         
     >Allow users to submit word new word    
         >Must be approved before being added to database
+        
+    >Cough Hint - JQuery
+    
 
 ***********************************
 
 Master To Do List:
 
->Create GitHub repository - Done
-
->Look into git pushing from multiple users - Done
-    >Commit with initials for the time being - Done
-
 >Create sample dictionary
-    >Maybe around 100 w
-    ords for the time being
+    >Maybe around 100 words for the time being
 
 >Create database
     >Work out logic
@@ -110,8 +106,11 @@ Master To Do List:
     
 >Brainstorm basic functionality of game
     >Determine grid size
+        >Mobile apps seem to use 10x10 grids
+        >Have 16x16 for desktop users?
     >Score System?
 
+>Javascript XSLT
 
 ---------------Paul----------------
 
@@ -130,13 +129,20 @@ Progress:
 
 To do list:
     >Create Wireframes
+        >Multiple resolutions
+        >mobile grid
 
+    >RSS feed
+        >Read & Write 
+        >Manipulation code
 
 Progress:
     >Wireframes
         -Made a few desktop wireframes for a common resolution
         -Still need to create mobile wireframes
 
+    >RSS Feed
+        >RSS xml created
 
 ----------------Glenn--------------
 
@@ -158,7 +164,10 @@ Progress:
 
 ++Completed Tasks++
 
+    >Create GitHub repository
 
+    >Look into git pushing from multiple users
+        >Commit with initials for the time being
 
 
 
