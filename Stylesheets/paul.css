@@ -1,0 +1,34 @@
+.test {
+    
+    border: 3px solid black;
+    height: 80%;
+}
+
+
+.gameArea {
+    
+    text-align: center;    
+    height: 80%;
+
+}
+
+.text {
+    
+    
+}
+
+
+.ui-icon-circle-arrow-e{
+    background-image: url("../Assets/img/testArrowSmall.gif");
+    
+}
+
+
+.letterDiv {
+    
+    width: 6.25%;
+    height: 6.25%;
+    float: left;
+    
+    
+}
