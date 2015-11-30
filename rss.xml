@@ -16,17 +16,20 @@
             <item>
                 <title>Number of words found</title>
                 <link>https://web-dev-project-glennncullen-1.c9users.io</link>
-                <description>557,829</description>
+                <description>A count of how many words have ever been found in game.</description>
+                <content>557,829</content>
             </item>
             <item>
                 <title>Most common word</title>
                 <link>https://web-dev-project-glennncullen-1.c9users.io</link>
-                <description>glenn</description>
+                <description>Shows the most commonly found word in the game</description>
+                <content>GLENN</content>
             </item>
             <item>
                 <title>Most difficult word</title>
                 <link>https://web-dev-project-glennncullen-1.c9users.io</link>
-                <description>easy</description>
+                <description>Shows the word with the most difficult percentage</description>
+                <content>EASY</content>
             </item>
     </channel>
 </rss>
