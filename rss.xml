@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <!--
+        Channel tag needs to have a title, link and description.
+        It can have as many items as needed.
+    -->
+    <channel>
+        <title>The Amazing Glenn (TAG)</title>
+        <link>https://web-dev-project-glennncullen-1.c9users.io</link>
+        <description>Wordsearch</description>
+            <!--
+                Each item needs to have a title, link and description.
+                The link can just be the url of the website,
+                we don't need to print it so it is not important.
+            -->
+            <item>
+                <title>Number of words found</title>
+                <link>https://web-dev-project-glennncullen-1.c9users.io</link>
+                <description>557,829</description>
+            </item>
+            <item>
+                <title>Most common word</title>
+                <link>https://web-dev-project-glennncullen-1.c9users.io</link>
+                <description>glenn</description>
+            </item>
+            <item>
+                <title>Most difficult word</title>
+                <link>https://web-dev-project-glennncullen-1.c9users.io</link>
+                <description>easy</description>
+            </item>
+    </channel>
+</rss>
