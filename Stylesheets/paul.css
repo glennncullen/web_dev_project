@@ -17,13 +17,6 @@
     
 }
 
-
-.ui-icon-circle-arrow-e{
-    background-image: url("../Assets/img/testArrowSmall.gif");
-    
-}
-
-
 .letterDiv {
     
     width: 6.25%;
@@ -32,3 +25,12 @@
     
     
 }
+
+.accordionImg{
+    
+    width:20%;
+    height:20%;
+}
+
+#accordion .ui-icon { display: none; }
+#accordion .ui-accordion-header a { padding-left: 0; }

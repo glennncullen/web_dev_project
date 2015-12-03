@@ -1,20 +1,9 @@
 $(document).ready(function (){
     
     
-    $(function() {
-    var icons = {
-      header: "ui-icon-circle-arrow-e",
-      activeHeader: "ui-icon-circle-arrow-s"
-    };
+   $(function() {
     $( "#accordion" ).accordion({
-      icons: icons
-    });
-    $( "#toggle" ).button().click(function() {
-      if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
-        $( "#accordion" ).accordion( "option", "icons", null );
-      } else {
-        $( "#accordion" ).accordion( "option", "icons", icons );
-      }
+      collapsible: true
     });
   });
 
@@ -29,6 +18,7 @@ $(document).ready(function (){
         $("h2").css('color','#95a5a6');
         $("h3").css('color','#95a5a6');
         $(".text").css('color','#95a5a6');
+        $(".nightText").css('color','#95a5a6');
         
     }else{
         
@@ -37,7 +27,7 @@ $(document).ready(function (){
         $("h2").css('color','black');
         $("h3").css('color','black');
         $(".text").css('color','black');
-        
+        $(".text").css('color','black');
     }
     
 }); 

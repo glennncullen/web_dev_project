@@ -34,7 +34,7 @@
         
         <div class="row">
             
-           <!-- <div class="col-md-2 test">
+            <div class="col-md-2 test">
                 
                 <h2>RSS Feed?</h2>
                 
@@ -46,7 +46,6 @@
                 
                 <p>Show time until next grip update</p>
                 
-            -->
             
             </div>
             
@@ -84,34 +83,36 @@
             </div>
             
             
-            <div class="col-md-4 test">
+            <div class="col-md-2 test">
                 
                 <h2>User Input</h2>
                 
                 <div id="accordion">
                     
-                    <!-- #### User Settings in the Accordion ### -->
-                    <h3><img src="Assets/img/settings-icon.png" class="accordionImg"> User Settings</h3>
+                    
+                    <h3>User Settings</h3>
                     <div>
-                    
-                        <form id="settingsForm">
-                            <input type="checkbox" id="nightCheck" name="nightMode" value="checkNightMode" class="text"> <span class="nightText">Night Mode</span> </input><br>
-                            <input type="button" id ="applyButton" name="applyButton" value="Apply changes"/>
-                        </form>
-                    
+                        <p>Dan is a danny dan daniel doodie do do da da</p>
                     </div>
                     
-                    <!-- #### RSS Feed in the Accordion ### -->
-                    <h3><img src="Assets/img/rss.png" class="accordionImg"> RSS Feed</h3>
+                    <h3>RSS Feed</h3>
                     <div id="rssfeed">
                     </div>
                     
-                    <!-- #### About Section in the Accordion ### -->
-                    <h3><img src="Assets/img/about-icon.png" class="accordionImg"> About this game</h3>
+                    <h3>About this game</h3>
                     <div>
                         <p>Dan is a danny dan daniel doodie do do da da</p>
                     </div>
                 </div>
+                
+                <p>E.g font colour, background colour, grid size, night/day theme</p>
+                
+                <form id="settingsForm">
+                    <input type="checkbox" id="nightCheck" name="nightMode" value="checkNightMode" class="text"> <span class="nightText">Night Mode</span> </input>
+                    <input type="button" id ="applyButton" name="applyButton" value="Apply changes"/>
+                    
+                    
+                </form>
                 
                 
             </div>
@@ -119,7 +120,38 @@
         
         </div>
         
+        
+        </div>
+        <form id="testPost" method="post" action="dan.php">
+            <input id="tester" type="button" value="Click me!"/>
+        </form>
         <script>
+            /*function getOutput() {
+               $.ajax({
+                    url:'PeeHP/dan.php',
+                    complete: function (response) {
+                        console.log(response.responseText);
+                    },
+                    error: function () {
+                        console.log('Bummer: there was an error!');
+                    }
+                });
+                return false;
+            }     */             
+            
+            $(document).ready(    
+                $("#tester").click(function(){
+                    $.post("PeeHP/dan.php",
+                    {
+                        name: "Donald Duck",
+                        city: "Duckburg"
+                    },
+                    function(data, status){
+                        alert("Data: " + data + "\nStatus: " + status);
+                    });
+                })
+            );
+            
             function getRSS(){
                 document.getElementById('rssfeed').innerHTML = "";
                 $.get('rss.xml', function (data) {
@@ -132,7 +164,6 @@
             }
             
             function changeRSS(){
-                 
             }
             
        </script>
