@@ -38,6 +38,7 @@
                 <score></score>
             </word>
         </threeLetter>
+        
         <fourLetter>
             <word>
                 <content></content>
@@ -47,6 +48,7 @@
                 <score></score>
             </word>
         </fourLetter>
+        
         <fiveLetter>
             <word>
                 <content></content>
@@ -56,6 +58,7 @@
                 <score></score>
             </word>
         </fiveLetter>  
+        
         <sixLetter>
             <word>
                 <content></content>
@@ -65,6 +68,7 @@
                 <score></score>
             </word>
         </sixLetter>
+        
         <sevenLetter>
             <word>
                 <content></content>
@@ -74,6 +78,7 @@
                 <score></score>
             </word>
         </sevenLetter>
+        
         <eightLetter>
             <word>
                 <content></content>
@@ -83,5 +88,47 @@
                 <score></score>
             </word>
         </eightLetter>
+        
     </dictionary>
+    
+    <!--    Background music xml structure
+        <song track="">
+            <artist></artist>
+            <title></title>
+            <musicURL></musicURL>
+            <musicLink></musicLink>
+        </song>
+    -->
+    <backgroundMusic>
+        <song track="0">
+            <artist>Plini</artist>
+            <title>November 3</title>
+            <musicURL>https://soundcloud.com/plini/november-3</musicURL>
+            <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231350695</musicLink>
+        </song>
+        <song track="1">
+            <artist>Bulb</artist>
+            <title>Breaking the Covenant</title>
+            <musicURL>https://soundcloud.com/343ndustries/3-breakingthecovenant</musicURL>
+            <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170523178</musicLink>
+        </song>
+        <song track="2">
+            <artist>Dreamwallow</artist>
+            <title>Dragon Roost Island</title>
+            <musicURL>https://soundcloud.com/dreamwallow/the-legend-of-zelda-dragon</musicURL>
+            <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/131605664</musicLink>
+        </song>
+        <song track="3">
+            <artist>myuu</artist>
+            <title>Song of Healing</title>
+            <musicURL>https://soundcloud.com/myuu/song-of-healing-zelda-majoras-mask-cover</musicURL>
+            <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/190964748</musicLink>
+        </song>
+        <song track="4">
+            <artist>Inon Zur</artist>
+            <title>Fallout 4 Main Theme</title>
+            <musicURL>https://soundcloud.com/alexctba/fallout-4-main-theme-by-inon-zur</musicURL>
+            <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225341472</musicLink>
+        </song>
+    </backgroundMusic>
 </gameStorage>
