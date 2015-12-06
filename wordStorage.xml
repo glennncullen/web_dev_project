@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--<?xml-stylesheet href="books.xsl" type="text/xsl"?> -->
+<wordStorage>
+  
+    <word id='0'>
+      <content>bum</content>
+      <times_occured>0</times_occured>
+    </word>
+
+  <fourLetter>
+      <value>link</value>  
+      <times_occured>0</times_occured>
+      <times_found>0</times_found>
+      <difficulty></difficulty>
+      <score></score>    
+  </fourLetter>
+  
+  <fiveLetter>
+      <value>hello</value>  
+      <times_occured>0</times_occured>
+      <times_found>0</times_found>
+      <difficulty></difficulty>
+      <score></score>
+  </fiveLetter>
+  
+  <sixLetter>
+      <value>rectum</value>  
+      <times_occured>0</times_occured>
+      <times_found>0</times_found>
+      <difficulty></difficulty>
+      <score></score>
+  </sixLetter>
+  
+  <sevenLetter>
+      <value>francis</value>  
+      <times_occured>0</times_occured>
+      <times_found>0</times_found>
+      <difficulty></difficulty>
+      <score></score>
+  </sevenLetter>
+  
+  <eightLetter>
+      <value>overload</value>  
+      <times_occured>0</times_occured>
+      <times_found>0</times_found>
+      <difficulty></difficulty>
+      <score></score>
+  </eightLetter>
+  
+</wordStorage>

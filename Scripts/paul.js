@@ -32,9 +32,21 @@ $(document).ready(function (){
     
 }); 
     
+    $("#addWordForm").on("submit", function(e){
+            e.preventDefault();
+            $this = $(this);
+            
+            $.ajax({
+               type: "POST",
+               url: $this.attr('action'),
+               data: $this.serialize(),
+               success : function(){
+                  alert('Done');
+                  document.getElementById("addWordForm").reset();
+               }
+            });
+        });
+               
     
-    
-    
-    
-    
+  
 });

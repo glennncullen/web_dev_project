@@ -139,7 +139,24 @@ function initDanJS(songChangeTag, wordFoundTag, gameFinishedTag){
             $(document).ready(function(){
                 alreadyExecuted = true; //Flag indicating that document ready was already created
                 
-
+                //Handles the volume controls using the slider
+                $(function() {
+                    $( "#slider-vertical" ).slider({
+                      orientation: "vertical",
+                      range: "min",
+                      min: 0,
+                      max: 100,
+                      value: 80,
+                      slide: function( event, ui ) {
+                        $( "#amount" ).val( ui.value );
+                         musicVolume = ($("#slider-vertical").slider("value") / 100);
+                        widget.setVolume(musicVolume);
+                      }
+                    });
+                    $( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
+                    
+                });
+    
                 //Allows autoplaying of songs
                 $('#autoPlay').click(function(){
                     playerSettings['autoPlay'] = toggleSetting(playerSettings['autoPlay']);

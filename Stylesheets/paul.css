@@ -17,7 +17,14 @@
     
 }
 
+#musicControl{
+    
+    padding-top:20px;
+}
 
+.musicButton{
+    width:100%;
+}
 
 .accordionImg{
     
@@ -25,5 +32,10 @@
     height:20%;
 }
 
+
 #accordion .ui-icon { display: none; }
 #accordion .ui-accordion-header a { padding-left: 0; }
+
+body{
+    background-color:#D2D7D3;
+}
