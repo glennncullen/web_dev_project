@@ -1,5 +1,7 @@
 git add *
-git add Documentaion/gitCheatSheet.txt
+
+<----STEP 1---->
+git add Documentaion/gitCheatSheet.txt     
     //We should be using this line and adding individual files
     //rather than using "git add *" because we don't want our
     //commit messages to overwrite every file that has been 
@@ -9,10 +11,12 @@ git add Documentaion/gitCheatSheet.txt
 git commit -m "blah blah"
     //I think Glenn can just use this one
 
+<----STEP 2---->
 git -c user.name="danthedrummer" -c user.email=danthedrummerrof@gmail.com commit -m "blah blah"
 git -c user.name="x14552067" -c user.email=paulreid96@gmail.com commit -m "blah blah"
 git -c user.name="glennncullen" -c user.email=glennncullen@gmail.com commit -m "blah blah"
     //username should be whatever your github name is
     //email is whatever your github account is linked to
 
+<----STEP 3---->
 git push -u origin master

@@ -8,7 +8,7 @@ var userTheme = "funny";  //Theme set by the user. "default", "funny", "christma
 
 //Stores user settings for the Soundcloud widget
 var playerSettings = {
-    "autoPlay":"true", //Sets the player to play automatically when the page loads or a new song loads
+    "autoPlay":"false", //Sets the player to play automatically when the page loads or a new song loads
     "hideRelated":"false",
     "showComments":"false",
     "showUser":"false",

@@ -171,3 +171,32 @@ Progress:
 
 
 
+
+
+
+-------------------------------------
+
+Final Day Todo - <3Paul&Glenn<3
+
+Pulling from the XML
+Writing to the XML
+Form Validation
+Styling the page
+User manual
+Project Report or whatever
+Suggesting new words
+Mobile view finalised - Media Queries maybe
+
+
+
+
+
+Taking words from user 
+    running error checks
+    Add them to XML
+    create new game using said words
+
+Taking in ramdom words
+    create XML with lots of sexy words
+    pull in to game.js from XML
+    randomly select 10 of those bad boys

@@ -5,13 +5,23 @@
  * Loading a XML from a file, adding new elements and editing elements
  */
 //get author from form
-$suggestion = strtolower($_POST["newWord"]);
+$wordOne = strtolower($_POST["newWord1"]);
+$wordTwo = strtolower($_POST["newWord2"]);
+$wordThree = strtolower($_POST["newWord3"]);
+$wordFour = strtolower($_POST["newWord4"]);
+$wordFive = strtolower($_POST["newWord5"]);
+$wordSix = strtolower($_POST["newWord6"]);
+$wordSeven = strtolower($_POST["newWord7"]);
+$wordEight = strtolower($_POST["newWord8"]);
+$wordNine = strtolower($_POST["newWord9"]);
+$wordTen = strtolower($_POST["newWord10"]);
 
 
 
-if (file_exists('wordStorage.xml')) {
+
+if (file_exists('../wordStorage.xml')) {
     //loads the xml and returns a simplexml object
-    $xml = simplexml_load_file('books.xml');
+    $xml = simplexml_load_file('../wordStorage.xml');
 
     //transforming the object in xml format
     $sxe = new SimpleXMLElement($xml->asXML());
@@ -21,50 +31,10 @@ if (file_exists('wordStorage.xml')) {
      <pre>' . htmlentities($xmlFormat, ENT_COMPAT | ENT_HTML401, "ISO-8859-1") . '</pre><br /><br />';
 
     //adding new child to the xml
-    
-    
-    switch($suggestion){
-        
-        case (strlen($suggestion) == 3):
-            $newChild = $sxe->addChild("threeLetter");
-            $newChild->addChild('word', $suggestion);
-            $newChild->addChild('word', $suggestion);
-            $newChild->addChild('word', $suggestion);
-            $newChild->addChild('word', $suggestion);
-            $newChild->addChild('word', $suggestion);
-            break;
-        
-        case (strlen($suggestion) == 4):
-            $newChild = $sxe->addChild("fourLetter");
-            $newChild->addChild('word', $suggestion);
-            break;
-        
-        case (strlen($suggestion) == 5):
-            $newChild = $sxe->addChild("fiveLetter");
-            $newChild->addChild('word', $suggestion);
-            break;
-        
-        case (strlen($suggestion) == 6):
-            $newChild = $sxe->addChild("sixLetter");
-            $newChild->addChild('word', $suggestion);
-            break;
-        
-        case (strlen($suggestion) == 7):
-            $newChild = $sxe->addChild("sevenLetter");
-            $newChild->addChild('word', $suggestion);
-            break;
-        
-        case (strlen($suggestion) == 8):
-            $newChild = $sxe->addChild("eightLetter");
-            $newChild->addChild('word', $suggestion);
-            break;
-        
-        default:
-            echo "Error adding word - "+$suggestion;
-            break;
-        
-    }
-    
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordOne);
+        $newChild->addChild('times_occured', 0);
+            
     
     //transforming the object in xml format
     $xmlFormat = $xml->asXML();
@@ -76,25 +46,23 @@ if (file_exists('wordStorage.xml')) {
     //changing the nodes values
     //in this case we are changing the value 
     //of all children called <name>
-    foreach ($sxe->children() as $child)
-        $child->genre = "CHANGED";
     //displaying the element in proper format
-    echo '<br /><u><b>This is the xml code from books.xml with all genre changed:</b></u>
+    echo '<br /><u><b>This is the xml code from ../wordStorage.xml with all genre changed:</b></u>
      <br /><br />
      <pre>' . htmlentities($xml->asXML(), ENT_COMPAT | ENT_HTML401, "ISO-8859-1") . '</pre>';
     } else {
-        exit('Failed to open books.xml.');
+        exit('Failed to open ../wordStorage.xml.');
     }
-    $sxe->asXML("books.xml");
+    $sxe->asXML("../wordStorage.xml");
     
     $dom = new DOMDocument('1.0');
     $dom->preserveWhiteSpace = false;
     $dom->formatOutput = true;
     /* @var $xml SimpleXMLElement */
     $dom->loadXML($sxe->asXML());
-    $dom->save("books.xml");
+    $dom->save("../wordStorage.xml");
     exit();
-    //file_put_contents('/home/ubuntu/workspace/books.xml', $xml->asXML());
+    //file_put_contents('/home/ubuntu/workspace/../wordStorage.xml', $xml->asXML());
     
     
     

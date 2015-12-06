@@ -1,0 +1,46 @@
+
+.clicked{
+    background-color: green;
+}
+
+.foundWord{
+    background-color: yellow;
+}
+
+#horseBox {
+    
+    text-align: center;    
+    min-height: 700px;
+
+}
+
+.letterDiv {
+    
+    width: 6.25%;
+    height: 35px;
+    float: left;
+    font-size: 4vw;
+    font-size: 4vh;
+
+}
+
+.wordList{
+    font-size: 25px;
+    text-align: center;
+}
+
+.wordToFind{
+    float: left;
+    width: 10%;
+}
+
+.wordFound{
+    background: green;
+}
+
+.header{
+    text-align: center;
+    padding: 5px;
+    
+    
+}

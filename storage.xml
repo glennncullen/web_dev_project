@@ -91,13 +91,19 @@
         
     </dictionary>
     
-    <!--    Background music xml structure
-        <song track="">
-            <artist></artist>
-            <title></title>
-            <musicURL></musicURL>
-            <musicLink></musicLink>
-        </song>
+    <!--Stores links to songs on Soundcloud so we can pull them out and 
+        play the music through the Soundcloud widget
+    
+        Background music xml structure
+            <song track="">
+                <artist></artist>
+                <title></title>
+                <musicURL></musicURL>
+                <musicLink></musicLink>
+            </song>
+        
+        Music Link uses the embed link without the iframe and the arguments in the url
+        The settings are controlled within the JS and inserted into an existing iframe in the HTML
     -->
     <backgroundMusic>
         <song track="0">
@@ -107,10 +113,10 @@
             <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231350695</musicLink>
         </song>
         <song track="1">
-            <artist>Bulb</artist>
-            <title>Breaking the Covenant</title>
-            <musicURL>https://soundcloud.com/343ndustries/3-breakingthecovenant</musicURL>
-            <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170523178</musicLink>
+            <artist>Moesley</artist>
+            <title>A Letter To Santa</title>
+            <musicURL>https://soundcloud.com/moesley/moesley-a-letter-to-santa</musicURL>
+            <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/6727270</musicLink>
         </song>
         <song track="2">
             <artist>Dreamwallow</artist>
@@ -131,4 +137,49 @@
             <musicLink>https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225341472</musicLink>
         </song>
     </backgroundMusic>
+    
+    <!--Stores paths to the sound effects stored on the server
+        so we can grab a path and play the sound we need
+    
+        Sound effect xml structure
+            <theme name="">
+                <sound name="">
+                    <title></title>
+                    <reference></reference>
+                </sound>
+            </theme>
+        
+        The "name" attribute is the name used to call the sound
+        from the Javascript Object it will be stored in
+    -->
+    <soundEffects>
+        <theme name="default">
+            <sound name="songChange">
+                <title>Record Scratch</title>
+                <reference>Assets/Sounds/DefaultTheme/Record Scratch.mp3</reference>
+            </sound>
+            <sound name="wordFound">
+                <title>Ding</title>
+                <reference>Assets/Sounds/DefaultTheme/ding.mp3</reference>
+            </sound>
+            <sound name="gameFinished">
+                <title>TADAAH</title>
+                <reference>Assets/Sounds/DefaultTheme/TADAAH.mp3</reference>
+            </sound>
+        </theme>
+        <theme name="funny">
+            <sound name="songChange">
+                <title>Sudden Impact</title>
+                <reference>Assets/Sounds/FunnyTheme/suddenImpact.wav</reference>
+            </sound>
+            <sound name="wordFound">
+                <title>Toasty</title>
+                <reference>Assets/Sounds/FunnyTheme/toasty.mp3</reference>
+            </sound>
+            <sound name="gameFinished">
+                <title>JOOOOOOHN CENA</title>
+                <reference>Assets/Sounds/FunnyTheme/cena.mp3</reference>
+            </sound>
+        </theme>
+    </soundEffects>
 </gameStorage>

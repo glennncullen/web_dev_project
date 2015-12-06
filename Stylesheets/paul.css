@@ -12,11 +12,6 @@
 
 }
 
-.text {
-    
-    
-}
-
 #musicControl{
     
     padding-top:20px;
@@ -38,4 +33,8 @@
 
 body{
     background-color:#D2D7D3;
+}
+
+.inputForm{
+     display:none;
 }

@@ -1,0 +1,17 @@
+#scContainer{
+    width:100%;
+    height:auto;
+    background:blue;
+}
+
+/*.scControls{
+    width:25%;
+    height:50px;
+    float:left;
+    color:white;
+    text-align:center;
+}*/
+
+#trackChange{
+    display:none;
+}

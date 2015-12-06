@@ -1,5 +1,20 @@
+/*global startUniqueGame*/
+
 $(document).ready(function (){
     
+    // PAUL!! can you change the size of the fonts for the letterDiv when it switches to mobile??
+    // Make them like, half the size they are now? I think that'll sort out all our worries with 
+    // the mobile version! Pleasy find handy guide below
+    
+    $('#createGameBtn').click(function(){
+        $('#addWordForm').toggleClass(className);
+            // or if you're only going to be removing the class and never adding it just use this:
+        $('#addWordForm').removeClass(className);
+            // There's also:
+        $('#addWordForm').remove();
+    });
+    
+    // END of handy guide
     
    $(function() {
     $( "#accordion" ).accordion({
@@ -32,21 +47,75 @@ $(document).ready(function (){
     
 }); 
     
-    $("#addWordForm").on("submit", function(e){
-            e.preventDefault();
-            $this = $(this);
-            
-            $.ajax({
-               type: "POST",
-               url: $this.attr('action'),
-               data: $this.serialize(),
-               success : function(){
-                  alert('Done');
-                  document.getElementById("addWordForm").reset();
-               }
-            });
-        });
-               
-    
-  
+
+
+
+    //  $('#addWordForm').validate({
+    //     rules: {
+    //         newWord1: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord2: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord3: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord4: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord5: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord6: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord7: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord8: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord9: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //         newWord10: {
+    //             required: true,
+    //             minlength: 3,
+    //             maxLength: 8
+    //         },
+    //     }
+    // });
+
 });
+
+
+
+/*
+Grabbing words
+
+var words = [];
+
+words.push(dataFromForm);
+
+startUniqueGame(words);
+
+*/
