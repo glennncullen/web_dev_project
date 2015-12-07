@@ -5,16 +5,16 @@
  * Loading a XML from a file, adding new elements and editing elements
  */
 //get author from form
-$wordOne = strtolower($_POST["newWord1"]);
-$wordTwo = strtolower($_POST["newWord2"]);
-$wordThree = strtolower($_POST["newWord3"]);
-$wordFour = strtolower($_POST["newWord4"]);
-$wordFive = strtolower($_POST["newWord5"]);
-$wordSix = strtolower($_POST["newWord6"]);
-$wordSeven = strtolower($_POST["newWord7"]);
-$wordEight = strtolower($_POST["newWord8"]);
-$wordNine = strtolower($_POST["newWord9"]);
-$wordTen = strtolower($_POST["newWord10"]);
+$wordOne = strtolower($_POST["newWordOne"]);
+$wordTwo = strtolower($_POST["newWordTwo"]);
+$wordThree = strtolower($_POST["newWordThree"]);
+$wordFour = strtolower($_POST["newWordFour"]);
+$wordFive = strtolower($_POST["newWordFive"]);
+$wordSix = strtolower($_POST["newWordSix"]);
+$wordSeven = strtolower($_POST["newWordSeven"]);
+$wordEight = strtolower($_POST["newWordEight"]);
+$wordNine = strtolower($_POST["newWordNine"]);
+$wordTen = strtolower($_POST["newWordTen"]);
 
 
 
@@ -33,6 +33,42 @@ if (file_exists('../wordStorage.xml')) {
     //adding new child to the xml
         $newChild = $sxe->addChild("word");
         $newChild->addChild('content', $wordOne);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordTwo);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordThree);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordFour);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordFive);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordSix);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordSeven);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordEight);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordNine);
+        $newChild->addChild('times_occured', 0);
+            
+        $newChild = $sxe->addChild("word");
+        $newChild->addChild('content', $wordTen);
         $newChild->addChild('times_occured', 0);
             
     

@@ -7,11 +7,18 @@ $(document).ready(function (){
     // the mobile version! Pleasy find handy guide below
     
     $('#createGameBtn').click(function(){
-        $('#addWordForm').toggleClass(className);
-            // or if you're only going to be removing the class and never adding it just use this:
-        $('#addWordForm').removeClass(className);
-            // There's also:
-        $('#addWordForm').remove();
+        $('.letterDiv').remove()
+        $('.wordList').remove();
+        $('.addWordForm').toggleClass("inputFormShow inputFormHide");
+        // $('#addWordForm').remove();
+    });
+    
+    $('#newGameBtn').click(function(){
+        if($('.addWordForm').hasClass('inputFormShow')){
+            $('.addWordForm').toggleClass("inputFormShow inputFormHide");
+        }
+        
+        // $('#addWordForm').remove();
     });
     
     // END of handy guide

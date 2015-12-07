@@ -14,7 +14,8 @@
         <!--linking JQuery & ajax-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
-        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js"></script>
 
         <!--Linking bootstrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -54,25 +55,31 @@
                         -->
             
             <div class="col-md-2 test" id="findTheseWords">
+                <h2 class="header">Find These Words</h2>
             </div>            
             
             <div class="col-md-6 gameArea test" id="horseBox">
+                
                 <button class='btn-success' id='newGameBtn'>New Game</button>
                 <button class='btn-primary' id='createGameBtn'>Create Game</button>
                 
-                <h3 class="inputForm">Enter the word you wish to add to the wordsearch!</h3>
-                    <form action="updateWordStorage.php" method="post" name="form" id="addWordForm" class="inputForm">
-                        Word One: <input type="text" name="newWordOne" class="inputForm"><br>
-                        Word Two: <input type="text" name="newWordTwo" class="inputForm"><br>
-                        Word Three: <input type="text" name="newWordThree" class="inputForm"><br>
-                        Word Four: <input type="text" name="newWordFour" class="inputForm"><br>
-                        Word Five: <input type="text" name="newWordFive" class="inputForm"><br>
-                        Word Six: <input type="text" name="newWordSix" class="inputForm"><br>
-                        Word Seven: <input type="text" name="newWordSeven" class="inputForm"><br>
-                        Word Eight: <input type="text" name="newWordEight" class="inputForm"><br>
-                        Word Nine: <input type="text" name="newWordNine" class="inputForm"><br>
-                        Word Ten: <input type="text" name="newWordTen" class="inputForm"><br>
-                        <input type="submit" class="inputForm">
+                <h2 class="header">Word Search</h2>
+                
+                
+                
+                <h3 class="addWordForm inputFormHide">Enter the words you wish to play with!</h3><br>
+                    <form action="/PeeHP/paul.php" method="post" name="form"  id="wordFormSubmit" class="inputFormHide addWordForm">
+                        Word One: <input type="text" name="newWordOne" class="inputFormShow"><br>
+                        Word Two: <input type="text" name="newWordTwo" class="inputFormShow"><br>
+                        Word Three: <input type="text" name="newWordThree" class="inputFormShow"><br>
+                        Word Four: <input type="text" name="newWordFour" class="inputFormShow"><br>
+                        Word Five: <input type="text" name="newWordFive" class="inputFormShow"><br>
+                        Word Six: <input type="text" name="newWordSix" class="inputFormShow"><br>
+                        Word Seven: <input type="text" name="newWordSeven" class="inputFormShow"><br>
+                        Word Eight: <input type="text" name="newWordEight" class="inputFormShow"><br>
+                        Word Nine: <input type="text" name="newWordNine" class="inputFormShow"><br>
+                        Word Ten: <input type="text" name="newWordTen" class="inputFormShow"><br>
+                        <input type="submit" class="inputFormShow">
                     </form>
             </div>
             
@@ -143,33 +150,371 @@
                             
 
                     </div>
+                </div>
+                
                 </div> <!--End of the Contianer-->
 
         
         
         <script>
         
+        function letterCheck(inputtxt){   
+                
+                var letters = /^[a-zA-Z]+$/;  
+                
+                if(inputtxt.value.match(letters)){
+                    
+                    if(inputtxt.value.length < 3 || inputtxt.value.length > 8){
+                        alert("Please make sure your words are longer 3 letters or more and no more than 8");
+                        return false;
+                    
+                            
+                        
+                    }else{
+                        
+                        if(inputtxt.value == "" || inputtxt.value == null || inputtxt.value.match(" ")){
+                        
+                            alert("A word must not be blank or have a space");
+                            
+                        }else{
+                            
+                            alert('Perfect');  
+                            document.form.newWordOne.focus();  
+                            return true;  
+                            
+                            
+                        }
+                        
+                        
+                    }
+                        
+                    
+                }else{
+                    
+                    alert('Please input letters only - No numbers or synbols!!');  
+                    return false;  
+            }  
+        }  
+                    
+                    
+                    
+                    
         
-            $("#addWordForm").on("submit", function(e){
-                    alert("working");
+        /*global startUniqueGame*/
+        
+    
+            
+            
+        
+        
+            // $("#wordFormSubmit").on("submit", function(e){
+            //         alert("working");
+            //         e.preventDefault();
+                    
+                    
+                    
+            //         if(letterCheck(document.form.newWordOne) && letterCheck(document.form.newWordTwo) && letterCheck(document.form.newWordThree) && 
+            //         letterCheck(document.form.newWordFour) && letterCheck(document.form.newWordFive) && letterCheck(document.form.newWordSix) && 
+            //         letterCheck(document.form.newWordSeven) && letterCheck(document.form.newWordEight) && letterCheck(document.form.newWordNine) && 
+            //         letterCheck(document.form.newWordTen) && ){
+                        
+                    
+                        
+                    
+                    
+                //     $this = $(this);
+                //     $.ajax({
+                //       type: "POST",
+                //       url: $this.attr('action'),
+                //       data: $this.serialize(),
+                //       success : function(){
+                //             //What happens when it validates successfully
+                //             //Basically push word array and its all g
+                    
+                    
+                //           }
+                           
+                           
+                //           alert('Done');
+                //           startUniqueGame(words);
+                //           document.getElementById("wordFormSubmit").reset();
+                //       }
+                       
+                //     }else{
+                //         return false;
+                //     }
+                    
+                //     });
+                // });
+                
+                
+                
+                
+        
+            // $(document).ready(function(){
+                
+            //     $('#wordFormSubmit').validate({ // initialize the plugin
+            //         rules: {
+            //             newWordOne: {
+            //                 required: true,
+            //                 minlength:3,
+            //                 nowhitespace:true,
+            //                 lettersonly:true
+            //             },
+            //             newWordTwo: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             newWordThree: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             newWordFour: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             newWordFive: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             newWordSix: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             newWordSeven: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             newWordEight: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             newWordNine: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             newWordTen: {
+            //                 required: true,
+            //                 minlength: 3,
+            //                 maxLength: 8
+            //             },
+            //             submitHandler: function(form){
+                           
+            //                 form.preventDefault();
+            //                 $this = $(this);
+            //                 $.ajax({
+                             
+            //                   type: "POST",
+            //                   url: $this.attr('action'),
+            //                   data: $this.serialize(),
+            //                   success : function(){
+                            
+            //                         alert("success");
+            //                         //What happens when it validates successfully
+            //                         //Basically push word array and its all g
+                                    
+            //                         alert('Done');
+            //                         startUniqueGame(words);
+            //                         document.getElementById("wordFormSubmit").reset();
+            //                         form.preventDefault();
+            //                          form.submit();
+
+            //                   }
+                                
+                                  
+            //                   });
+                       
+            //             }
+            //         }
+            //     });
+
+                
+            // });
+                
+                
+            //     $(document).ready(function(){
+                     
+                     
+                     
+                     
+            //     $("#wordFormSubmit").on("submit", function(e){
+            //                 alert("working");
+            //                 e.preventDefault();
+            //                 console.log("Default Prevented");
+            //     }).validate({
+            //         onsubmit: false,
+            //         rules: {
+            //             newWordOne: {
+            //                 required: true,
+            //                 minlength:3
+            //             },
+            //             newWordTwo: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             newWordThree: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             newWordFour: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             newWordFive: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             newWordSix: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             newWordSeven: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             newWordEight: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             newWordNine: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             newWordTen: {
+            //                 required: true,
+            //                 minlength: 3
+            //             },
+            //             submitHandler: function(form){
+                           
+            //               alert("submitHandler");
+            //                 form.preventDefault();
+            //                 var $this = $(this);
+            //                 $.ajax({
+                                     
+            //                       type: "POST",
+            //                       url: $this.attr('action'),
+            //                       data: $this.serialize(),
+            //                       success : function(){
+                                    
+            //                             alert("success");
+            //                             //What happens when it validates successfully
+            //                             //Basically push word array and its all g
+                                        
+            //                             alert('Done');
+            //                             startUniqueGame(words);
+            //                             document.getElementById("wordFormSubmit").reset();
+            //                             form.preventDefault();
+            //                             form.submit();
+                                        
+            //                       }
+                                        
+                                          
+            //                 });
+                               
+            //             }
+                        
+            //     }
+                    
+                    
+                    
+            //     });
+            // });        
+                
+                
+               $(document).ready(function(){
+        
+                $("#wordFormSubmit").on("submit", function(e){
                     e.preventDefault();
                     $this = $(this);
+                    
                     
                     $.ajax({
                        type: "POST",
                        url: $this.attr('action'),
                        data: $this.serialize(),
+                       
+                       beforeSend: function(valid){
+                           
+                           //The validation is done in here
+                            if(letterCheck(document.form.newWordOne) && letterCheck(document.form.newWordTwo) && letterCheck(document.form.newWordThree) && 
+                            letterCheck(document.form.newWordFour) && letterCheck(document.form.newWordFive) && letterCheck(document.form.newWordSix) && 
+                            letterCheck(document.form.newWordSeven) && letterCheck(document.form.newWordEight) && letterCheck(document.form.newWordNine) && 
+                            letterCheck(document.form.newWordTen)){
+                                
+                                
+                           
+                           alert("Successfully validated");
+                             
+                            }else{
+                               
+                                valid.abort();
+                                
+                            }
+                                                           
+                          
+                           
+                           
+                       },
+                       
                        success : function(){
-                          alert('Done');
-                          document.getElementById("addWordForm").reset();
-                       }
-                    });
-                });
+                           
+                           
+                            var words = [];
+                            
+                            words.push(form.newWordOne.value.toLowerCase());
+                            words.push(form.newWordTwo.value.toLowerCase());
+                            words.push(form.newWordThree.value.toLowerCase());
+                            words.push(form.newWordFour.value.toLowerCase());
+                            words.push(form.newWordFive.value.toLowerCase());
+                            words.push(form.newWordSix.value.toLowerCase());
+                            words.push(form.newWordSeven.value.toLowerCase());
+                            words.push(form.newWordEight.value.toLowerCase());
+                            words.push(form.newWordNine.value.toLowerCase());
+                            words.push(form.newWordTen.value.toLowerCase());
+                            
+                            console.log(words);
+                            
+                            if($('.addWordForm').hasClass('inputFormShow')){
+                                
+                                $('.addWordForm').toggleClass("inputFormShow inputFormHide");
+                                
+                            }
         
-            $(document).ready(function(){
-               
+                            startUniqueGame(words);
+                           
+                           
+                          alert('Done');
+                          document.getElementById("wordFormSubmit").reset();
+                          
+                       },
+                       
+                       error: function(){
+                           alert("Error");
+                       }
+                       
+                       
+                    });
                 
+                });
+                        
             });
+                
+            
+                
+                
+                
+                
+                
+                
+                
                 
 
         

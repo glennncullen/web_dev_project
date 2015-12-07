@@ -35,6 +35,10 @@ body{
     background-color:#D2D7D3;
 }
 
-.inputForm{
+.inputFormHide{
      display:none;
+}
+
+.inputFormShow{
+    display:inline;
 }

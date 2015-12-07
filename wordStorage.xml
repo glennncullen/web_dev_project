@@ -1,208 +1,209 @@
 <?xml version="1.0"?>
 <!--<?xml-stylesheet href="books.xsl" type="text/xsl"?> -->
 <wordStorage>
-  <word id="0">
+  <word>
     <content>sausage</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="1">
+  <word>
     <content>blubber</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="2">
+  <word>
     <content>pencil</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="3">
+  <word>
     <content>cloud</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="4">
+  <word>
     <content>moon</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="5">
+  <word>
     <content>water</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="6">
+  <word>
     <content>computer</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="7">
+  <word>
     <content>school</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="8">
+  <word>
     <content>network</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="9">
+  <word>
     <content>hammer</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="10">
+  <word>
     <content>walking</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="11">
+  <word>
     <content>violently</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="12">
+  <word>
     <content>mediocre</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="13">
+  <word>
     <content>literature</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="14">
+  <word>
     <content>chair</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="15">
+  <word>
     <content>two</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="16">
+  <word>
     <content>window</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="17">
+  <word>
     <content>cords</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="18">
+  <word>
     <content>musical</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="19">
+  <word>
     <content>zebra</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="20">
+  <word>
     <content>xylophone</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="21">
+  <word>
     <content>penguin</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="22">
+  <word>
     <content>home</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="23">
+  <word>
     <content>dog</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="24">
+  <word>
     <content>final</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="25">
+  <word>
     <content>ink</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="26">
+  <word>
     <content>teacher</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="27">
+  <word>
     <content>fun</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="28">
+  <word>
     <content>website</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="29">
+  <word>
     <content>banana</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="30">
+  <word>
     <content>uncle</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="31">
+  <word>
     <content>softly</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="32">
+  <word>
     <content>mega</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="33">
+  <word>
     <content>ten</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="34">
+  <word>
     <content>awesome</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="35">
+  <word>
     <content>attatch</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="36">
+  <word>
     <content>blue</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="37">
+  <word>
     <content>internet</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="38">
+  <word>
     <content>bottle</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="39">
+  <word>
     <content>tight</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="40">
+  <word>
     <content>zone</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="41">
+  <word>
     <content>tomato</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="42">
+  <word>
     <content>prison</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="43">
+  <word>
     <content>hydro</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="44">
+  <word>
     <content>cleaning</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="45">
+  <word>
     <content>send</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="46">
+  <word>
     <content>frog</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="47">
+  <word>
     <content>cup</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="48">
+  <word>
     <content>gamer</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="49">
+  <word>
     <content>juice</content>
     <times_occured>0</times_occured>
   </word>
-  <word id="50">
+  <word>
     <content>glenn</content>
     <times_occured>0</times_occured>
   </word>
+  <!--End of pre-defined words-->
 </wordStorage>
