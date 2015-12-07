@@ -1,35 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
-    <!--
+  <!--
         Channel tag needs to have a title, link and description.
         It can have as many items as needed.
     -->
-    <channel>
-        <title>The Amazing Glenn (TAG)</title>
-        <link>https://web-dev-project-glennncullen-1.c9users.io</link>
-        <description>Wordsearch</description>
-            <!--
+  <channel>
+    <title>The Amazing Glenn (TAG)</title>
+    <link>https://web-dev-project-glennncullen-1.c9users.io</link>
+    <description>Wordsearch</description>
+    <!--
                 Each item needs to have a title, link and description.
                 The link can just be the url of the website,
                 we don't need to print it so it is not important.
             -->
-            <item>
-                <title>Number of words found</title>
-                <link>https://web-dev-project-glennncullen-1.c9users.io</link>
-                <description>A count of how many words have ever been found in game.</description>
-                <content>557,829</content>
-            </item>
-            <item>
-                <title>Most common word</title>
-                <link>https://web-dev-project-glennncullen-1.c9users.io</link>
-                <description>Shows the most commonly found word in the game</description>
-                <content>GLENN</content>
-            </item>
-            <item>
-                <title>Most difficult word</title>
-                <link>https://web-dev-project-glennncullen-1.c9users.io</link>
-                <description>Shows the word with the most difficult percentage</description>
-                <content>EASY</content>
-            </item>
-    </channel>
+    <item>
+      <title>Number of words found</title>
+      <link>https://web-dev-project-glennncullen-1.c9users.io</link>
+      <description>A count of how many words have ever been found in game.</description>
+    </item>
+    <item>
+      <title>Most common word</title>
+      <link>https://web-dev-project-glennncullen-1.c9users.io</link>
+      <description>Shows the most commonly found word in the game</description>
+    </item>
+    <item>
+      <title>Most difficult word</title>
+      <link>https://web-dev-project-glennncullen-1.c9users.io</link>
+      <description>Shows the word with the most difficult percentage</description>
+    </item>
+ <item><title>Newest words added</title><link>https://web-dev-project-glennncullen-1.c9users.io</link><description>New word: doggie, sossie, heyo, betridge, daniel, monica, failure, peehp, java, monitor</description></item><item><title>Newest words added</title><link>https://web-dev-project-glennncullen-1.c9users.io</link><description>doggie, sossie, heyo, betridge, daniel, monica, failure, peehp, java, monitor</description></item></channel>
 </rss>

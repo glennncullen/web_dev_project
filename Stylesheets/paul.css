@@ -1,8 +1,9 @@
-.test {
-    
+.mainDivs {
+    background-color:#89C4F4;
     border: 3px solid black;
     height: 80%;
 }
+
 
 
 .gameArea {
@@ -13,11 +14,12 @@
 }
 
 #musicControl{
-    
+    background-color:#89C4F4;        
     padding-top:20px;
 }
 
 .musicButton{
+    background-color:#89C4F4;    
     width:100%;
 }
 
@@ -32,7 +34,7 @@
 #accordion .ui-accordion-header a { padding-left: 0; }
 
 body{
-    background-color:#D2D7D3;
+    background-color:#D2D7D3 !important;
 }
 
 .inputFormHide{
@@ -41,4 +43,41 @@ body{
 
 .inputFormShow{
     display:inline;
+}
+
+#accordion .ui-accordion-content{
+    background-color:#2574A9;
+}
+
+.innerAccordion{
+    background-color:#2574A9;
+    
+}
+
+#settingsForm {
+    background:red;
+}
+
+.ui-accordion .ui-accordion-content {
+    background-color:#2574A9 !important;
+}   
+ 
+.ui-widget-content{
+    background:#2574A9 !important;
+}
+
+#accordion{
+    padding-bottom: 10px;
+}
+
+p{
+    color:white;
+}
+
+.header{
+    color:#2C3E50;
+}
+
+.styleText{
+    color:white;
 }

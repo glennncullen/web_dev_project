@@ -3,6 +3,8 @@
 var gameLetters = []; // stores the Letter objects of the current board
 var tempWords = []; // stores the most recent words in wordStorage.xml
 var gameWords = []; // stores the current words the user is searching for
+var score = 0; // this stores the running score of the game
+var wonTheGame = false;
 
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 
                 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 
@@ -10,6 +12,7 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
                 'y', 'z'] // em -- this, eh -- this is the alphabet...
 
 var playerSelectedLetters = []; // tracks and stores the Letter objects the player has selected
+
 
 
 $(document).ready(function(){
@@ -24,19 +27,6 @@ $(document).ready(function(){
         });
     });
     
-    $('#createGameBtn').click(function(){
-        
-        
-        
-        // $('#horseBox').append('<form action="/PeeHP/paul.php" method="post" name="form" id="addWordForm"></form>');
-        $('#horseBox').append('<form name="form" id="addWordForm"></form>');
-        for(var i = 0; i < 10; i++){
-            $('#addWordForm').append('Word ' + (i + 1) + ': <input type="text" name="newWord' + i + '"><br>');
-        }
-        
-        $('#addWordForm').append('<br><input type="submit">')
-    
-    })
     
     // clicking on a letter will select it. Clicking on a second
     // letter will check to see if a word has been found
@@ -68,7 +58,6 @@ $(document).ready(function(){
 
 // Generates the random words needed for a new game
 function randomWords(){
-    
     // retrieve all the words listed in wordStorage.xml using ajax
     $.get('wordStorage.xml', function(data){
         $(data).find("word").each(function(){
@@ -103,30 +92,32 @@ function randomWords(){
 
 
 
-// reset any outstanding divs, headers or arrays
+// reset any outstanding divs or arrays
 function clearPreviousGame(){
     $('.letterDiv').remove()
     $('.wordList').remove();
-    $('.header').remove();
     gameLetters = [];
     gameWords = [];
     tempWords = [];
-}
+    score = 0;
+    wonTheGame = false;
+    playerSelectedLetters = [];
+} // end of clearPreviousGame
 
 
 // takes in the array of words the user has created, adds them to the
 // gameWords array and fills out the game area using them.
 function startUniqueGame(uniqueWords){
+    clearPreviousGame()
     gameWords = uniqueWords;
     fillGameArea();
-}
+} // end of startUniqueGame
 
 
 
 // fill out the game area as appropriate
 function fillGameArea(){
     // randomly fill out the game area with letters
-    $('#horseBox').append('<h2 class="header">Word Search</h2>')
     for( var y = 0; y < 16; y++ ){
         for( var x = 0; x < 16; x++ ){
             var id = 'L' + 'x' + x + 'y' + y;
@@ -137,7 +128,6 @@ function fillGameArea(){
     }
     
     // fill in the actual words needed to be found into the game area
-    $('#findTheseWords').append('<h2 class="header">Find These Words</h2>')
     for(var i = 0; i < gameWords.length; i++){
         plotWord(gameWords[i])
         $('#findTheseWords').append('<div class="wordList" id="word' + i + '">' + gameWords[i] + '</div>')
@@ -152,15 +142,17 @@ function fillGameArea(){
 // the selected letters.
 function checkForWord(selectedWords){
     if(selectedWords[0].word !== selectedWords[1].word){
-        $('#' + selectedWords[0].id).delay(400).animate({backgroundColor: 'white'}, 400);
-        $('#' + selectedWords[1].id).animate({backgroundColor: 'white'}, 400);            
+        $('#' + selectedWords[0].id).delay(400).animate({backgroundColor: '#89C4F4'}, 400);
+        $('#' + selectedWords[1].id).animate({backgroundColor: '#89C4F4'}, 400);            
     }else if(selectedWords[0].position === 'first' && selectedWords[1].position === 'last'
                 ||
     selectedWords[1].position === 'first' && selectedWords[0].position === 'last'){
+        score += 1;
         for(var i = 0; i < gameLetters.length; i++){
             if(gameLetters[i].word === selectedWords[0].word){
                 $('#' + gameLetters[i].id).animate({backgroundColor: 'green'}, 400);
                 $('#' + gameLetters[i].id).addClass('wordFound');
+                document.getElementById('wordFoundAudio').src = soundEffects[userTheme]['wordFound'];
             }
         }
         for(var i = 0; i < gameWords.length; i++){
@@ -169,14 +161,20 @@ function checkForWord(selectedWords){
                 i = gameWords.length;
             }
         }
+        if(score === 10){
+            wonTheGame = true;
+            document.getElementById('gameFinishedAudio').src = soundEffects[userTheme]['gameFinished'];
+            winner();
+        }
+        
     }else{
         $(function(){
-            $('#' + selectedWords[0].id).delay(400).animate({backgroundColor: 'white'}, 400);
-            $('#' + selectedWords[1].id).animate({backgroundColor: 'white'}, 400);            
+            $('#' + selectedWords[0].id).delay(400).animate({backgroundColor: '#89C4F4'}, 400);
+            $('#' + selectedWords[1].id).animate({backgroundColor: '#89C4F4'}, 400);            
         });
     }
     
-}
+} // end of checkForWord
 
 
 
@@ -300,7 +298,25 @@ function canPlaceLetter(letter){
         return true;
     }
 } // end of canPlaceLetter()
-    
+
+
+// plays a little animation when the player wins the game
+function winner(){
+    var colours = ['#ffddcc', '#ffccb3', '#ffbb99', '#ffaa80', '#ff9966', '#ff884d', '#ff7733', '#ff661a', '#ff5500', '#ffeee5', '#7FFF00', '#D2691E', '#FF7F50', '#6495ED', '#FFF8DC', '#DC143C', '#00FFFF', '#008B8B', '#B8860B', '#A9A9A9', '#BDB76B', '#F0F8FF', '#FAEBD7', '#00FFFF', '#7FFFD4', '#F0FFFF', '#F5F5DC', '#FFE4C4', '#DCDCDC']
+    var newColour = colours[randomise(0, colours.length-1)]
+    var x = randomise(0, 255)
+
+    $('#' + gameLetters[x].id).delay(randomise(100, 700)).animate({
+        backgroundColor: newColour
+    })
+    if(wonTheGame){
+        return winner();
+    }
+}
+
+
+
+
 
 
 

@@ -4,7 +4,7 @@ var trackPosition; //For holding the current position in the song
 var musicVolume = 0.8;  //Sets the default volume for the Soundcloud player
 var alreadyExecuted = false;    //Flag to prevent $(document) replication 
 var songChangeAudio, wordFoundAudio, gameFinishedAudio;
-var userTheme = "funny";  //Theme set by the user. "default", "funny", "christmas"
+var userTheme = "default";  //Theme set by the user. "default", "funny", "christmas"
 
 //Stores user settings for the Soundcloud widget
 var playerSettings = {
@@ -109,11 +109,11 @@ function initDanJS(songChangeTag, wordFoundTag, gameFinishedTag){
             trackSettings = "&amp;auto_play="+playerSettings["autoPlay"]+"&amp;hide_related="+playerSettings["hideRelated"]
                         +"&amp;show_comments="+playerSettings["showComments"]+"&amp;show_user="+playerSettings["showUser"]
                         +"&amp;show_reposts="+playerSettings["showReposts"]+"&amp;visual="+playerSettings["showArtwork"];
-            if(playerSettings['showArtwork']==="false"){
+            /*if(playerSettings['showArtwork']==="false"){
                 document.getElementById('myPlayer').height = 180;   //Reduces the height of the iFrame if the artwork IS NOT being shown
             }else if(playerSettings['showArtwork']==="true"){
                 document.getElementById('myPlayer').height = 450;   //Increases the height of the iFrame if the artwork IS being shown
-            }
+            }*/
         }
         
         //All player settings are true or false. Swaps setting if needed
@@ -122,15 +122,6 @@ function initDanJS(songChangeTag, wordFoundTag, gameFinishedTag){
                 return "false";
             }else{
                 return "true";
-            }
-        }
-        
-        ///////////////TEMPORARY TO CHECK FUNCTIONALITY///////////////////
-        function userThemeToggle(){
-            if(userTheme=="default"){
-                userTheme="funny";
-            }else{
-                userTheme="default";
             }
         }
         
@@ -165,8 +156,6 @@ function initDanJS(songChangeTag, wordFoundTag, gameFinishedTag){
                     }else{
                         document.getElementById('autoPlay').innerHTML = "AutoPlay Disabled!";
                     }
-                    
-                                    userThemeToggle();///////////////TEMPORARY TO CHECK FUNCTIONALITY///////////////////
                 });
 
                 //Lower volume of Soundcloud player
@@ -174,19 +163,15 @@ function initDanJS(songChangeTag, wordFoundTag, gameFinishedTag){
                     musicVolume-=0.05;
                     $("#slider-vertical").slider("value", musicVolume*100); 
                     widget.setVolume(musicVolume);
-                    
-                                    wordFoundAudio.src = soundEffects[userTheme]['wordFound'];///////////////TEMPORARY TO CHECK FUNCTIONALITY///////////////////
                 });
+                
                 //Higher volume of Soundcloud player
                 $('#volumeUp').click(function(){
                     musicVolume+=0.05;
                     $("#slider-vertical").slider("value", musicVolume*100); 
                     widget.setVolume(musicVolume);
-                    
-                                    gameFinishedAudio.src = soundEffects[userTheme]['gameFinished'];///////////////TEMPORARY TO CHECK FUNCTIONALITY///////////////////
                 })
 
-                
                 //Skips current song
                 $('#skipSong').click(function(){    //Jumps to the next song
                     widget.isPaused(function(paused){   //Checks if the player is currently paused (Can't skip song if it isn't playing)
@@ -198,7 +183,18 @@ function initDanJS(songChangeTag, wordFoundTag, gameFinishedTag){
                     })
                 });
                 
+                $('#themeSelection').click(function(){
+                    $(this).find('input').each(function(){
+                        if($(this).prop("checked")){
+                            userTheme = $(this).attr('value');
+                        }
+                        if(userTheme=="funny"){
+                            console.log('test');
+                            $('body').css('background-image: url("../img/funnyBackground.jpg")');
+                        }
+                    })
+                });
+                
             })
         }
-        
     }

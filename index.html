@@ -4,12 +4,12 @@
         <title>Word Search RIA</title>
 
         <!--Linking stylesheets-->
-        <link rel='stylesheet' type="text/css" href='Stylesheets/main_style.css'> 
+        <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href ="Assets/bootstrap-master/dist/css/bootstrap-theme.min.css">        
         <link rel='stylesheet' type="text/css" href='Stylesheets/dan.css'> 
         <link rel='stylesheet' type="text/css" href='Stylesheets/glenn.css'> 
         <link rel='stylesheet' type="text/css" href='Stylesheets/paul.css'> 
-        <link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href ="Assets/bootstrap-master/dist/css/bootstrap-theme.min.css">
+
         
         <!--linking JQuery & ajax-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -23,7 +23,6 @@
         
 
         <!--Linking javascript-->
-        <script type='text/javascript' src='Scripts/main.js'></script>
         <script type='text/javascript' src='Scripts/dan.js'></script>
         <script type='text/javascript' src='Scripts/paul.js'></script>
         <script type='text/javascript' src='Scripts/glenn.js'></script>
@@ -54,18 +53,16 @@
             </div>
                         -->
             
-            <div class="col-md-2 test" id="findTheseWords">
+            <div class="col-md-2 mainDivs" id="findTheseWords">
                 <h2 class="header">Find These Words</h2>
             </div>            
             
-            <div class="col-md-6 gameArea test" id="horseBox">
+            <div class="col-md-6 gameArea mainDivs" id="horseBox">
                 
                 <button class='btn-success' id='newGameBtn'>New Game</button>
                 <button class='btn-primary' id='createGameBtn'>Create Game</button>
                 
                 <h2 class="header">Word Search</h2>
-                
-                
                 
                 <h3 class="addWordForm inputFormHide">Enter the words you wish to play with!</h3><br>
                     <form action="/PeeHP/paul.php" method="post" name="form"  id="wordFormSubmit" class="inputFormHide addWordForm">
@@ -83,46 +80,37 @@
                     </form>
             </div>
             
-           <div class="col-md-4 test">
+           <div class="col-md-4 mainDivs">
                 
                 <div id="accordion">
-                    
-                    <!-- #### User Settings in the Accordion ### -->
-                    <h3><img src="Assets/img/settings-icon.png" class="accordionImg"> User Settings</h3>
-                    <div>
-                    
-                        <form id="settingsForm">
-                            <input type="checkbox" id="nightCheck" name="nightMode" value="checkNightMode" class="text"> <span class="nightText">Night Mode</span> </input><br>
-                            <input type="button" id ="applyButton" name="applyButton" value="Apply changes"/>
+                   <!-- #### User Settings in the Accordion ### -->
+                    <h3 class="innerAccordion"><img src="Assets/img/settings-icon.png" class="accordionImg" alt="Icon depicting settings. Click to open user settings"> User Settings</h3>
+                    <div class="innerAccordion">
+                        <form id="themeSelection"><h4><span class="styleText">Sound Effect Theme</span></h4><br>
+                            <input id="defaultThemeSelector" type="radio" name="theme" value="default" checked>  <span class="styleText">Default Sounds</span><br>
+                            <input id="funnyThemeSelector" type="radio" name="theme" value="funny">  <span class="styleText">Funny Sounds</span>
                         </form>
-                        
-                        <button onclick="getID">Get ID Button **TEST**</button>
-                    
                     </div>
                     
                     <!-- #### RSS Feed in the Accordion ### -->
-                    <h3><img src="Assets/img/rss.png" class="accordionImg"> RSS Feed</h3>
-                    <div id="rssfeed">
+                    <h3><img src="Assets/img/rss.png" class="accordionImg"  alt="Icon depicting an RSS feed. Click to open the RSS feed"> RSS Feed</h3>
+                    <div id="rssfeed" class="innerAccordion">
                     </div>
                     
                     <!-- #### About Section in the Accordion ### -->
-                    <h3><img src="Assets/img/about-icon.png" class="accordionImg"> About this game</h3>
-                    <div>
+                    <h3><img src="Assets/img/about-icon.png" class="accordionImg" alt="Icon depicting an about section. Click to open the about section"> About this game</h3>
+                    <div class="innerAccordion">
                         <p>This is a simple wordsearch game.</p>
                         <p>To select a word, click the beginning and end letters.</p><br/>
                         <p>Developed by:</p>
-                        <p>Paul Reid</p>
-                        <p>Dan Downey</p>
-                        <p>Glenn Cullen</p>
+                        <p>Paul Reid - x14552067</p>
+                        <p>Dan Downey - x14728599</p>
+                        <p>Glenn Cullen - x14529249</p>
                     </div>
                 </div>
-                
-             </div>
-        
             </div>
-        
-                
-                <div class="row">
+            </div>
+                <div class="row mainDivs">
                     <div class="col-md-2" id="musicControl">
                         <div class="row">
                             <div class="col-md-10">
@@ -131,19 +119,16 @@
                                 <p id="volumeDown" class="btn btn-default musicButton">Volume Down</p>
                                 <p id="skipSong" class="btn btn-default musicButton">Skip Song</p>
                             </div>
-                            
                              <div class="col-md-2">
                                 <div id="slider-vertical"></div>
                             </div>
-                            
                         </div>
                     </div>
-                            
                      
                     <div class="col-md-10">
                        
                                         <!-- Empty frame to hold the soundcloud player -->
-                        <iframe id="myPlayer" width="100%" height="180" scrolling="no" frameborder="no" src=""></iframe> 
+                        <iframe id="myPlayer" width="100%" height="178" scrolling="no" frameborder="no" src=""></iframe> 
                         <audio id="songChangeAudio" autoplay="true" volume="0" src="" type="audio/mpeg"></audio>
                         <audio id="wordFoundAudio" autoplay="true" volume="0" src="" type="audio/mpeg"></audio>
                         <audio id="gameFinishedAudio" autoplay="true" volume="0" src="" type="audio/mpeg"></audio>
@@ -154,8 +139,6 @@
                 
                 </div> <!--End of the Contianer-->
 
-        
-        
         <script>
         
         function letterCheck(inputtxt){   
@@ -167,8 +150,6 @@
                     if(inputtxt.value.length < 3 || inputtxt.value.length > 8){
                         alert("Please make sure your words are longer 3 letters or more and no more than 8");
                         return false;
-                    
-                            
                         
                     }else{
                         
@@ -178,13 +159,10 @@
                             
                         }else{
                             
-                            alert('Perfect');  
                             document.form.newWordOne.focus();  
                             return true;  
                             
-                            
                         }
-                        
                         
                     }
                         
@@ -195,239 +173,9 @@
                     return false;  
             }  
         }  
-                    
-                    
-                    
-                    
-        
+             
         /*global startUniqueGame*/
         
-    
-            
-            
-        
-        
-            // $("#wordFormSubmit").on("submit", function(e){
-            //         alert("working");
-            //         e.preventDefault();
-                    
-                    
-                    
-            //         if(letterCheck(document.form.newWordOne) && letterCheck(document.form.newWordTwo) && letterCheck(document.form.newWordThree) && 
-            //         letterCheck(document.form.newWordFour) && letterCheck(document.form.newWordFive) && letterCheck(document.form.newWordSix) && 
-            //         letterCheck(document.form.newWordSeven) && letterCheck(document.form.newWordEight) && letterCheck(document.form.newWordNine) && 
-            //         letterCheck(document.form.newWordTen) && ){
-                        
-                    
-                        
-                    
-                    
-                //     $this = $(this);
-                //     $.ajax({
-                //       type: "POST",
-                //       url: $this.attr('action'),
-                //       data: $this.serialize(),
-                //       success : function(){
-                //             //What happens when it validates successfully
-                //             //Basically push word array and its all g
-                    
-                    
-                //           }
-                           
-                           
-                //           alert('Done');
-                //           startUniqueGame(words);
-                //           document.getElementById("wordFormSubmit").reset();
-                //       }
-                       
-                //     }else{
-                //         return false;
-                //     }
-                    
-                //     });
-                // });
-                
-                
-                
-                
-        
-            // $(document).ready(function(){
-                
-            //     $('#wordFormSubmit').validate({ // initialize the plugin
-            //         rules: {
-            //             newWordOne: {
-            //                 required: true,
-            //                 minlength:3,
-            //                 nowhitespace:true,
-            //                 lettersonly:true
-            //             },
-            //             newWordTwo: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             newWordThree: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             newWordFour: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             newWordFive: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             newWordSix: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             newWordSeven: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             newWordEight: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             newWordNine: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             newWordTen: {
-            //                 required: true,
-            //                 minlength: 3,
-            //                 maxLength: 8
-            //             },
-            //             submitHandler: function(form){
-                           
-            //                 form.preventDefault();
-            //                 $this = $(this);
-            //                 $.ajax({
-                             
-            //                   type: "POST",
-            //                   url: $this.attr('action'),
-            //                   data: $this.serialize(),
-            //                   success : function(){
-                            
-            //                         alert("success");
-            //                         //What happens when it validates successfully
-            //                         //Basically push word array and its all g
-                                    
-            //                         alert('Done');
-            //                         startUniqueGame(words);
-            //                         document.getElementById("wordFormSubmit").reset();
-            //                         form.preventDefault();
-            //                          form.submit();
-
-            //                   }
-                                
-                                  
-            //                   });
-                       
-            //             }
-            //         }
-            //     });
-
-                
-            // });
-                
-                
-            //     $(document).ready(function(){
-                     
-                     
-                     
-                     
-            //     $("#wordFormSubmit").on("submit", function(e){
-            //                 alert("working");
-            //                 e.preventDefault();
-            //                 console.log("Default Prevented");
-            //     }).validate({
-            //         onsubmit: false,
-            //         rules: {
-            //             newWordOne: {
-            //                 required: true,
-            //                 minlength:3
-            //             },
-            //             newWordTwo: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             newWordThree: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             newWordFour: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             newWordFive: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             newWordSix: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             newWordSeven: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             newWordEight: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             newWordNine: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             newWordTen: {
-            //                 required: true,
-            //                 minlength: 3
-            //             },
-            //             submitHandler: function(form){
-                           
-            //               alert("submitHandler");
-            //                 form.preventDefault();
-            //                 var $this = $(this);
-            //                 $.ajax({
-                                     
-            //                       type: "POST",
-            //                       url: $this.attr('action'),
-            //                       data: $this.serialize(),
-            //                       success : function(){
-                                    
-            //                             alert("success");
-            //                             //What happens when it validates successfully
-            //                             //Basically push word array and its all g
-                                        
-            //                             alert('Done');
-            //                             startUniqueGame(words);
-            //                             document.getElementById("wordFormSubmit").reset();
-            //                             form.preventDefault();
-            //                             form.submit();
-                                        
-            //                       }
-                                        
-                                          
-            //                 });
-                               
-            //             }
-                        
-            //     }
-                    
-                    
-                    
-            //     });
-            // });        
-                
                 
                $(document).ready(function(){
         
@@ -449,25 +197,17 @@
                             letterCheck(document.form.newWordSeven) && letterCheck(document.form.newWordEight) && letterCheck(document.form.newWordNine) && 
                             letterCheck(document.form.newWordTen)){
                                 
-                                
-                           
-                           alert("Successfully validated");
                              
                             }else{
                                
                                 valid.abort();
                                 
                             }
-                                                           
-                          
-                           
-                           
                        },
                        
                        success : function(){
                            
-                           
-                            var words = [];
+                           var words = [];
                             
                             words.push(form.newWordOne.value.toLowerCase());
                             words.push(form.newWordTwo.value.toLowerCase());
@@ -490,16 +230,13 @@
         
                             startUniqueGame(words);
                            
-                           
-                          alert('Done');
                           document.getElementById("wordFormSubmit").reset();
-                          
+                        //   updateRSS();
                        },
                        
                        error: function(){
                            alert("Error");
                        }
-                       
                        
                     });
                 
@@ -507,16 +244,6 @@
                         
             });
                 
-            
-                
-                
-                
-                
-                
-                
-                
-                
-
         
             //Runs any initialisation functions on current page and external scripts
             function initPage(){
@@ -536,12 +263,13 @@
                 document.getElementById('rssfeed').innerHTML = "";
                 $.get('rss.xml', function (data) {
                     $(data).find("item").each(function () { //Searches through the rss.xml for any "item" tag
-                        var x = $(this);    //Stores the tag's contents in the variable x
-                        var myRSS = "<p>"+x.find("title").text()+" = "+x.find("content").text()+"<p>";  //Pulls out the needed information from the stored tag
-                        document.getElementById('rssfeed').innerHTML += myRSS;
+                        var myRSS = "<h4 class='rssContent'>"+$(this).find("title").text()+" :</h4><br><p class='rssContent'> "+$(this).find("description").text()+"</p>";  //Pulls out the needed information from the stored tag
+                        document.getElementById('rssfeed').innerHTML = myRSS;
                     });
                 });
             }
+            
+            
 
        </script>
     </body>

@@ -25,104 +25,33 @@ $(document).ready(function (){
     
    $(function() {
     $( "#accordion" ).accordion({
-      collapsible: true
+    //   collapsible: true
     });
   });
 
-
-    $("#applyButton").on("click", function(){
-        
-     var checkTest = $("#nightCheck").is(":checked");
-     
-    if(checkTest){
-        $("body").css('background-color','#2c3e50');
-        $("p").css('color','#95a5a6');
-        $("h2").css('color','#95a5a6');
-        $("h3").css('color','#95a5a6');
-        $(".text").css('color','#95a5a6');
-        $(".nightText").css('color','#95a5a6');
-        
-    }else{
-        
-        $("body").css('background-color','white');
-        $("p").css('color','black');
-        $("h2").css('color','black');
-        $("h3").css('color','black');
-        $(".text").css('color','black');
-        $(".text").css('color','black');
-    }
-    
-}); 
-    
-
-
-
-    //  $('#addWordForm').validate({
-    //     rules: {
-    //         newWord1: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord2: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord3: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord4: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord5: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord6: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord7: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord8: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord9: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //         newWord10: {
-    //             required: true,
-    //             minlength: 3,
-    //             maxLength: 8
-    //         },
-    //     }
-    // });
-
 });
 
-
-
-/*
-Grabbing words
-
-var words = [];
-
-words.push(dataFromForm);
-
-startUniqueGame(words);
-
-*/
+//######## Remenants of a feature which turned the site into "nightmode" which made it darker for ease of use in dark enviroment
+//     $("#applyButton").on("click", function(){
+        
+//      var checkTest = $("#nightCheck").is(":checked");
+     
+//     if(checkTest){
+//         $("body").css('background-color','#2c3e50');
+//         $("p").css('color','#95a5a6');
+//         $("h2").css('color','#95a5a6');
+//         $("h3").css('color','#95a5a6');
+//         $(".text").css('color','#95a5a6');
+//         $(".nightText").css('color','#95a5a6');
+        
+//     }else{
+        
+//         $("body").css('background-color','white');
+//         $("p").css('color','black');
+//         $("h2").css('color','black');
+//         $("h3").css('color','black');
+//         $(".text").css('color','black');
+//         $(".text").css('color','black');
+//     }
+    
+// }); 
